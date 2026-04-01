@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Buy Exam Summary - MR C Academy</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+    /* ================= HEADER ================= */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #0a5d2d;
+    padding: 15px 40px;
+    color: white;
+}
+
+.logo {
+    width: 45px;
+    margin-right: 10px;
+}
+
+header h1 {
+    font-size: 22px;
+    margin: 0;
+}
+.page-title { text-align:center; margin-top:40px; font-size:36px; }
+.payment-box { max-width:800px; margin:50px auto; padding:30px; background:#f4f4f4; border-radius:10px; text-align:center; box-shadow:0 4px 12px rgba(0,0,0,0.1);}
+.course-card { background:white; padding:20px; margin-bottom:20px; border-radius:8px; box-shadow:0 3px 10px rgba(0,0,0,0.1);}
+.download-btn { display:inline-block; margin:6px; background:#0a5d2d; color:white; padding:8px 15px; border:none; border-radius:4px; cursor:pointer;}
+.download-btn:hover { background:#06391d;}
+.btn { background:#0a5d2d; color:white; padding:12px 20px; border:none; border-radius:6px; cursor:pointer;}
+.whatsapp-link { color:#25D366; font-weight:bold; text-decoration:none;}
+input { padding:12px; width:80%; max-width:400px; margin-bottom:20px;}
+</style>
+
+</head>
+
+<body>
+
+<header>
+<img src="images/logo.png" class="logo">
+<h1>MR C Academy</h1>
+<nav>
+<a href="index.html">Home</a>
+</nav>
+</header>
+
+<h1 class="page-title">Buy Exam Summary</h1>
+
+<div class="payment-box">
+
+<p>Price per summary: ₦1000</p>
+
+<!-- EMAIL -->
+<input type="email" id="userEmail" placeholder="Enter your email" required>
+
+<!-- GST -->
+<div class="course-card">
+<h3>General Studies (GST)</h3>
+<button class="download-btn" onclick="payNow('GST101')">GST101</button>
+<button class="download-btn" onclick="payNow('GST102')">GST102</button>
+<button class="download-btn" onclick="payNow('GST103')">GST103</button>
+<button class="download-btn" onclick="payNow('GST104')">GST104</button>
+<button class="download-btn" onclick="payNow('GST203')">GST203</button>
+<button class="download-btn" onclick="payNow('GST302')">GST302</button>
+</div>
+
+<!-- ECO -->
+<div class="course-card">
+<h3>Economics (ECO)</h3>
+<button class="download-btn" onclick="payNow('ECO101')">ECO101</button>
+<button class="download-btn" onclick="payNow('ECO202')">ECO202</button>
+<button class="download-btn" onclick="payNow('ECO303')">ECO303</button>
+</div>
+
+<!-- MORE + SEARCH -->
+<div class="course-card">
+
+<button class="btn" onclick="toggleMore()" id="toggleBtn">
+Get More Summaries ▼
+</button>
+
+<div id="moreSection" style="display:none; margin-top:20px;">
+
+<input
+type="text"
+id="summarySearch"
+placeholder="Search course code (e.g. ECO202)"
+onkeyup="searchSummary()"
+>
+
+<ul id="summaryList" style="list-style:none; padding:0; max-height:300px; overflow-y:auto;">
+
+<li><button class="download-btn" onclick="payNow('ECO401')">ECO401</button></li>
+<li><button class="download-btn" onclick="payNow('ECO402')">ECO402</button></li>
+<li><button class="download-btn" onclick="payNow('ECO403')">ECO403</button></li>
+
+<li><button class="download-btn" onclick="payNow('BUS201')">BUS201</button></li>
+<li><button class="download-btn" onclick="payNow('BUS202')">BUS202</button></li>
+
+<li><button class="download-btn" onclick="payNow('ACC201')">ACC201</button></li>
+<li><button class="download-btn" onclick="payNow('ACC202')">ACC202</button></li>
+
+<li><button class="download-btn" onclick="payNow('MKT201')">MKT201</button></li>
+<li><button class="download-btn" onclick="payNow('MKT202')">MKT202</button></li>
+
+<li><button class="download-btn" onclick="payNow('ENT201')">ENT201</button></li>
+<li><button class="download-btn" onclick="payNow('ENT202')">ENT202</button></li>
+
+<li><button class="download-btn" onclick="payNow('ENG111')">ENG111</button></li>
+<li><button class="download-btn" onclick="payNow('ENG113')">ENG113</button></li>
+
+<li><button class="download-btn" onclick="payNow('CRD124 SUMMARY')">CRD124 SUMMARY</button></li>
+<li><button class="download-btn" onclick="payNow('ENG141')">ENG141</button></li>
+
+<li><button class="download-btn" onclick="payNow('ENG162')">ENG162</button></li>
+<li><button class="download-btn" onclick="payNow('ENG172')">ENG172</button></li>
+
+<li><button class="download-btn" onclick="payNow('INR212')">INR212</button></li>
+<li><button class="download-btn" onclick="payNow('INR232')">INR232</button></li>
+
+<li><button class="download-btn" onclick="payNow('INR262')">INR262</button></li>
+<li><button class="download-btn" onclick="payNow('LIN111')">LIN111</button></li>
+
+<li><button class="download-btn" onclick="payNow('LIN112')">LIN112</button></li>
+<li><button class="download-btn" onclick="payNow('PHS818')">PHS818</button></li>
+
+<li><button class="download-btn" onclick="payNow('MTH281')">MTH281</button></li>
+<li><button class="download-btn" onclick="payNow('STT211')">STT211</button></li>
+
+<li><button class="download-btn" onclick="payNow('PED236')">PED236</button></li>
+<li><button class="download-btn" onclick="payNow('MKT402')">MKT402</button></li>
+
+</ul>
+
+<p style="margin-top:15px;">
+Can't find your summary?
+<a href="https://wa.me/2349046023711" class="whatsapp-link">
+Chat on WhatsApp
+</a>
+</p>
+
+</div>
+</div>
+
+</div>
+
+<!-- PAYSTACK -->
+<script src="https://js.paystack.co/v1/inline.js"></script>
+
+<script>
+
+function payNow(courseCode){
+
+let email = document.getElementById("userEmail").value;
+
+if(email === ""){
+alert("Please enter your email");
+return;
+}
+
+// ALL COURSES (IMPORTANT)
+let available = [
+'GST101','GST102','GST103','GST104','GST203','GST302',
+'ECO101','ECO202','ECO303',
+
+'ECO401','ECO402','ECO403',
+'BUS201','BUS202',
+'ACC201','ACC202',
+'MKT201','MKT202','MKT402',
+'ENT201','ENT202',
+'ENG111','ENG113','ENG141','ENG162','ENG172',
+'INR212','INR232','INR262',
+'LIN111','LIN112',
+'PHS818',
+'MTH281','STT211',
+'PED236',
+'CRD124 SUMMARY'
+];
+
+if(!available.includes(courseCode)){
+alert("Summary not available. Contact us on WhatsApp.");
+window.open("https://wa.me/2349046023711", "_blank");
+return;
+}
+
+// PAYSTACK
+let handler = PaystackPop.setup({
+key: 'pk_live_2d846c889ae79826e0a00a23e0b1afaaf4803339',
+email: email,
+amount: 100000, // ₦1000
+currency: "NGN",
+ref: 'txn_' + Date.now(),
+
+metadata: {
+custom_fields: [
+{
+display_name: "Course Code",
+variable_name: "course_code",
+value: courseCode
+}
+]
+},
+
+callback: function(response){
+
+alert("Payment successful!");
+
+// SAVE ACCESS
+localStorage.setItem("paid_" + courseCode, "true");
+
+// REDIRECT
+window.location.href = "download.html?course=" + courseCode;
+
+},
+
+onClose: function(){
+alert("Payment cancelled");
+}
+
+});
+
+handler.openIframe();
+
+}
+
+// TOGGLE MORE
+function toggleMore(){
+let section = document.getElementById("moreSection");
+let btn = document.getElementById("toggleBtn");
+
+if(section.style.display === "none"){
+section.style.display = "block";
+btn.innerHTML = "Hide Summaries ▲";
+}else{
+section.style.display = "none";
+btn.innerHTML = "Get More Summaries ▼";
+}
+}
+
+// SEARCH
+function searchSummary(){
+let input = document.getElementById("summarySearch");
+let filter = input.value.toUpperCase();
+let li = document.querySelectorAll("#summaryList li");
+
+li.forEach(item => {
+let text = item.textContent || item.innerText;
+item.style.display = text.toUpperCase().includes(filter) ? "" : "none";
+});
+}
+
+</script>
+
+<footer>
+<p>© 2026 MR C Academy</p>
+</footer>
+
+</body>
+</html>
